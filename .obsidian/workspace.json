@@ -1,0 +1,213 @@
+{
+  "main": {
+    "id": "0e6c872f945da385",
+    "type": "split",
+    "children": [
+      {
+        "id": "5daa04625f03825c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "acc82d65e6232bae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RTOS 임베디드/RTOS/스케쥴러.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4100218767d0996c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RTOS 임베디드/RTOS/Object.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6f548b33aebd1d6a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "QNX/Architecture.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "22e8934265edf974",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "QNX/Architecture.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7345f54c41b6e6d0",
+    "type": "split",
+    "children": [
+      {
+        "id": "659d266e5ac8fd5e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a4ce4a63f8642af2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8090427b19a16673",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "b237e0c5b167d2f3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTimeReverse"
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 246.5086555480957
+  },
+  "right": {
+    "id": "737e71395dcf92e7",
+    "type": "split",
+    "children": [
+      {
+        "id": "84bd635a524f8d35",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "38c65f7d1277f5a9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "QNX/Architecture.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "38ed2eaeffac5c85",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "QNX/Architecture.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a8fca08d0c7f7825",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "d5afbe13ea9678bc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "QNX/Architecture.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "22e8934265edf974",
+  "lastOpenFiles": [
+    "QNX/Pasted image 20240710095533.png",
+    "QNX/Architecture.md",
+    "QNX/QNX OS service/IPC.md",
+    "QNX/QNX OS service",
+    "RTOS 임베디드/RTOS/스케쥴러.md",
+    "RTOS 임베디드/RTOS/Object.md",
+    "RTOS 임베디드/세마포어.md",
+    "RTOS 임베디드/태스크.md",
+    "QNX",
+    "RTOS 임베디드/RTOS/특성.md",
+    "RTOS 임베디드/RTOS/서비스.md",
+    "RTOS 임베디드/RTOS/RTOS 개요.md",
+    "RTOS 임베디드",
+    "Untitled 1.md",
+    "Pasted image 20240709113515.png",
+    "Pasted image 20240709113457.png",
+    "RTOS/Untitled Diagram.svg",
+    "제목 없는 다이어그램.drawio",
+    "2024-07-09.md",
+    "RTOS/Untitled Diagram 1.svg",
+    "Untitled Diagram.svg",
+    "Untitled.canvas",
+    "RTOS 임베디드/RTOS"
+  ]
+}
