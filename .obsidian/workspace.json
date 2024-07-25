@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RTPM/RTPM.md",
-                "mode": "preview",
+                "file": "sapeon/Tensor.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "RTPM/RTPM.md",
+                "file": "sapeon/Tensor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "RTPM/RTPM.md",
+                "file": "sapeon/Tensor.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "RTPM/RTPM.md"
+                "file": "sapeon/Tensor.md"
               }
             }
           },
@@ -155,11 +155,14 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "2d8d9fab8dcf5d58",
+  "active": "4c1d49e93dc7b195",
   "lastOpenFiles": [
+    "Untitled.md",
+    "sapeon/Tensor.md",
+    "RTPM/RTPM.md",
+    "sapeon",
     "RTPM/Vision Protocol.md",
     "Drawing 2024-07-24 14.57.37.excalidraw.md",
-    "RTPM/RTPM.md",
     "Untitled.canvas",
     "QNX/QNX OS service/IPC.md",
     "RTPM",
