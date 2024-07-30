@@ -2,5 +2,8 @@
   "drawio-obsidian",
   "obsidian-git",
   "obsidian-excalidraw-plugin",
-  "obsidian-vimrc-support"
+  "obsidian-vimrc-support",
+  "callout-manager",
+  "templater-obsidian",
+  "highlightr-plugin"
 ]

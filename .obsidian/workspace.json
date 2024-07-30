@@ -8,18 +8,77 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4c1d49e93dc7b195",
+            "id": "b0ee4d23f53e7dc3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sapeon/Tensor.md",
+                "file": "insert_callout.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fb182d896d937627",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cmake/Target.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "75867b5f83e9aa59",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "device driver/device driver.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2892ff17eff7976e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "device driver/device driver.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "19b27e987b86847a",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Pasted image 20240729130934.png"
+              }
+            }
+          },
+          {
+            "id": "8ececa4e24502253",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sapeon/Tensor/Tensor.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -86,7 +145,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "sapeon/Tensor.md",
+                "file": "device driver/device driver.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +162,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "sapeon/Tensor.md",
+                "file": "device driver/device driver.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -126,7 +185,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "sapeon/Tensor.md"
+                "file": "device driver/device driver.md"
               }
             }
           },
@@ -152,43 +211,57 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "callout-manager:Insert Callout": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "4c1d49e93dc7b195",
+  "active": "2892ff17eff7976e",
   "lastOpenFiles": [
-    "Untitled.md",
-    "sapeon/Tensor.md",
+    "Pasted image 20240729130934.png",
+    "Pasted image 20240730162838.png",
+    "device driver/device driver.md",
+    "device driver/platform driver.md",
+    "device driver",
+    "cmake/Target.md",
+    "insert_callout.md",
+    "sapeon/Tensor/Tensor.md",
+    "sapeon/Untitled.md",
+    "cmake",
+    "sapeon/CloseDevice.md",
+    "GerResult.md",
+    "Untitled 1.md",
+    "Untitled 2.md",
+    "sapeon/DoInferece.md",
+    "sapeon/postProcessResult.md",
+    "sapeon/Initialize.md",
+    "sapeon/Flow.md",
+    "sapeon/Tensor/Tensor Shape Format.md",
+    "sapeon/Tensor/Shape.md",
+    "cpp/struct 생성자.md",
+    "cpp/emplace_back.md",
+    "cpp/using_type.md",
+    "cpp/Title.md",
+    "RTPM/Drawing 2024-07-24 14.57.37.excalidraw.md",
+    "cpp",
+    "sapeon/Tensor/Shape-TC-D-20-0936.md",
+    "sapeon/Tensor",
     "RTPM/RTPM.md",
     "sapeon",
     "RTPM/Vision Protocol.md",
-    "Drawing 2024-07-24 14.57.37.excalidraw.md",
     "Untitled.canvas",
     "QNX/QNX OS service/IPC.md",
     "RTPM",
-    "Untitled 1.md",
     "Untitled Diagram.svg",
     "새 텍스트 문서.txt",
     "Drawing 2024-07-24 14.57.37.excalidraw.png",
-    "Untitled.vimrc.md",
     "QNX/Pasted image 20240710095533.png",
-    "QNX/Architecture.md",
     "QNX/QNX OS service",
-    "RTOS 임베디드/RTOS/스케쥴러.md",
-    "RTOS 임베디드/RTOS/Object.md",
-    "RTOS 임베디드/세마포어.md",
-    "RTOS 임베디드/태스크.md",
     "QNX",
-    "RTOS 임베디드/RTOS/특성.md",
-    "RTOS 임베디드/RTOS/서비스.md",
-    "RTOS 임베디드/RTOS/RTOS 개요.md",
     "RTOS 임베디드",
     "Pasted image 20240709113515.png",
     "Pasted image 20240709113457.png",
     "RTOS/Untitled Diagram.svg",
-    "제목 없는 다이어그램.drawio",
-    "2024-07-09.md",
-    "RTOS/Untitled Diagram 1.svg",
-    "RTOS 임베디드/RTOS"
+    "RTOS/Untitled Diagram 1.svg"
   ]
 }
