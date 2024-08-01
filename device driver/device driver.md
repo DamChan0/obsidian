@@ -7,6 +7,72 @@
 # Basic structuer
 
 ## source code
+### 기본 헤더
+```c
+#include <linux/kernel.h>
+
+#include <linux/module.h>
+
+#include <linux/init.h>
+
+#include <linux/fs.h>
+
+#include <linux/device.h>
+```
+	
+### device tree 지원을 위한 헤더
+```c
+#include <linux/of.h>
+
+#include <linux/of_device.h>
+
+#include <linux/of_gpio.h>
+
+#include <linux/of_address.h>
+
+#include <linux/of_irq.h>
+```
+#### `<linux/of.h>`
+
+- **역할**: Device Tree의 기본적인 인터페이스를 정의합니다.
+- **주요 기능**:
+    - Device Tree 노드와 프로퍼티를 탐색하고 접근할 수 있는 다양한 함수와 매크로를 제공합니다.
+    - `of_find_node_by_name()`, `of_get_property()`, `of_node_put()` 등의 함수가 포함되어 있습니다.
+
+#### `<linux/of_device.h>`
+
+- **역할**: Device Tree와 관련된 디바이스 인터페이스를 정의합니다.
+- **주요 기능**:
+    - Device Tree 노드로부터 디바이스 드라이버를 매칭하고 관리할 수 있는 함수들을 제공합니다.
+    - `of_device_alloc()`, `of_device_register()`, `of_device_unregister()` 등의 함수가 포함되어 있습니다.
+
+#### `<linux/of_gpio.h>`
+
+- **역할**: Device Tree를 통해 GPIO 핀을 관리할 수 있는 인터페이스를 제공합니다.
+- **주요 기능**:
+    - Device Tree 노드로부터 GPIO 핀 번호와 설정을 가져오는 함수들을 제공합니다.
+    - `of_get_named_gpio()`, `of_gpio_named_count()`, `of_gpio_get_active_pin()` 등의 함수가 포함되어 있습니다.
+
+#### `<linux/of_address.h>`
+
+- **역할**: Device Tree를 통해 메모리 주소를 관리할 수 있는 인터페이스를 제공합니다.
+- **주요 기능**:
+    - Device Tree 노드로부터 메모리 주소와 크기를 가져오는 함수들을 제공합니다.
+    - `of_translate_address()`, `of_address_to_resource()`, `of_iomap()` 등의 함수가 포함되어 있습니다.
+
+#### `<linux/of_irq.h>`
+
+- **역할**: Device Tree를 통해 IRQ (Interrupt Request)를 관리할 수 있는 인터페이스를 제공합니다.
+- **주요 기능**:
+    - Device Tree 노드로부터 IRQ 번호와 설정을 가져오는 함수들을 제공합니다.
+    - `of_irq_get()`, `of_irq_to_resource()`, `of_irq_count()` 등의 함수가 포함되어 있습니다.
+
+
+#### 상세 내용 : [[device tree  접근]]
+
+
+---
+
 
 ```c
 #include <linux/module.h>   // Needed by all modules
@@ -32,13 +98,13 @@ module_init(module_begin);
 module_exit(module_end);
 ```
 
-기본적으로 init exit 함수를 가진다
+device driver는 기본적으로 init exit 함수를 가진다
 
-module_init으로 등록한 함수가 insmod \<driver file name\>
-수행시 호출되는 함수
+### module_init
+- module_init으로 등록한 함수가 insmod \<driver file name\> 수행시 호출되는 함수이다
 
-module_exit로 등록한 함수가 rmmod \<driver file name\> 
-수행시 호출되는 함수
+### module_exit
+- module_exit로 등록한 함수가 rmmod \<driver file name\>  수행시 호출되는 함수이다
 ## make file
 
 - device driver 파일 형식인 .ko를 만들기 위해서는 modules 라는 옵션을 make 명령어와 같이 수행해야한다
@@ -70,8 +136,6 @@ clean:
 	rm -f $ $(TEST_APP) $(TEST_APP_OBJ)
 ```
 
-
-
 > [!hint]+ 
 > 
 > 
@@ -79,7 +143,7 @@ clean:
 
 ---
 
-# input data by device driver
+# 하드웨어 제어를 위한 디바이스 드라이버
 
 write 함수가 포함되어 있는 device driver를 다시 작성
 
@@ -137,18 +201,17 @@ _init_ 함수, _exit_ 함수 및 각 함수 등록하는 과정
 
 위와 같이 open release 이외에 write함수를 추가하여 드라이버로 들어오는 입력을 복사 (`get_user()` ) 하여 컨드롤 하고자하는 하드웨어 (gpio)의 값에 써주는 함수 (    `gpio_set_value(GPD_DISPLAY_IDX, dst_reg);` )를 추가적으로 가지고 있어야 한다, 
 
-- get_user() 
-	- `get_user` 함수는 리눅스 커널에서 사용자 공간에서 커널 공간으로 데이터를 안전하게 복사하기 위해 사용되는 함수. 이 함수는 `uaccess.h` 헤더 파일에 정의되어 있고 `get_user` 함수는 사용자 공간에서 커널 공간으로 단일 값을 복사하는 데 사용됨
-- void gpio_set_value(unsigned gpio, int value);
+##  get_user() 
+	- `get_user` 함수는 리눅스 커널에서 사용자 공간에서 커널 공간으로 데이터를 안전하게 복사하기 위해 사용되는 함수. 이 함수는 `uaccess.h` 헤더 파일에 정의되어 있고 `get_user` 함수는 사용자 공간에서 커널 공간으로 단일 값을 복사하는 데
+	  사용됨
+## void gpio_set_value(unsigned gpio, int value);
 	- `gpio_set_value`함수는 리눅스 커널에서 GPIO(General Purpose Input/Output) 핀의 값을 설정하는 데 사용되며. 이 함수는 `linux/gpio.h` 헤더 파일에 정의되어 있습니다.
-- int gpio_get_value(unsigned gpio);
+## int gpio_get_value(unsigned gpio);
 	- `gpio_get_value()` 함수는 특정 gpio의 value값을 가져오는 함수로 현재 핀에 입력된 값이 얼마인지 확인 할 수 있다
 
 
-> [!tip]+ print
+> [!tip]+ print 함수 종류
 > - printk : 커널에 로그를 찍는데 로그의 레벨을 설정해줘야한다
 > 
 > - pr_xxxx
 >    - pr_info, pr_err, pr_warn이 있으며 printk에서 레벨을 매번 지정하지 않고 레벨을 함수에서 자동으로 지정해주는 방식의 함수이다
-
-

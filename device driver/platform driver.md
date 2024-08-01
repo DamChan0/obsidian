@@ -44,11 +44,10 @@
 
 해당 파일을 dtsi 파일로 위 파일을 include 해야하는 dts 파일을 찾아서 추가해줘야한다
 
-## 2. platform driver 작성
+## 2. platform driver 작성 필수 요소들 
 
-### sorce code 작성
-
-#### 기본 struct
+## 필수 요소들 
+### 기본 struct
 
 ```c
 struct platform_driver {
@@ -62,7 +61,7 @@ struct platform_driver {
 	bool prevent_deferred_probe;
 };
 ```
-#### \_init\_ , \_exit\_ 함수 
+### \_init\_ , \_exit\_ 함수 
 
 ```c
 static int32_t __init test_init(void)
@@ -85,8 +84,7 @@ module_init(test_init);
 module_exit(test_exit);
 ```
 
-
-#### probe 함수 
+### probe 함수 
 ```c
 	static int32_t test_probe(struct platform_device *pdev)
 {
@@ -98,7 +96,43 @@ module_exit(test_exit);
 	//... 
 }
 ```
-위의 init exit , probe 함수는 필수 적으로 있어야 한다. 
+
+### device table 
+커널이 시작될 때 device driver코드에서 target으로 하는 하드웨어를 device tree에서 찾아 probe 함수를 동작 시키기 위해서는 device_id table을 명시해줘야 한다
+```c
+struct of_device_id {
+    char *name;
+    char *type;
+    char *compatible;
+    const void *data;
+};
+```
+
+해당 구조체를 선언 후 식별에 필요한 필드에 데이터를 입력 하고난 후 
+platform_driver structure에 of_device_id를 대입하면 된다. 
+```c
+static const struct of_device_id test_match[] = { 
+						{ .compatible =
+						"telechips,tdrv" },
+						  {} };
+						  
+static struct platform_driver test_driver = 
+{ .driver = { .name = "test_driver", 
+			.of_match_table = test_match, // of_match_table 설정 
+			.owner = THIS_MODULE, }, 
+			.probe = test_probe, 
+			.remove = test_remove, 
+			};
+```
+#### 위와 같이 설정하게되면 platform device driver는 tset_driver라는 이름의 device tree를 찾고 있으면 probe 함수가 호출된다.
+
+- of_device_id 를 설정할 때 { }  빈 중괄호를 표시해주는 이유는 배열을 끝을 표시하는 역할을 한다. 
+
+
+## 함수 분석
+ 
+[[device tree  접근]]
+
 
 ## 3. Makefile 작성
 
@@ -215,3 +249,7 @@ int main()
 	return 1;
 }
 ```
+
+
+
+[[device tree  접근]]
