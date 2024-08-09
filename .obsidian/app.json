@@ -2,5 +2,10 @@
   "promptDelete": false,
   "vimMode": false,
   "spellcheck": false,
-  "readableLineLength": false
+  "readableLineLength": false,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "./",
+  "userIgnoreFilters": [
+    "img"
+  ]
 }
